@@ -1,0 +1,36 @@
+{
+  "name": "khatfield/laravel-ytel",
+  "description": "Laravel Package for Ytel API",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Keith Hatfield",
+      "email": "keith.hatfield@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "repositories": [{
+    "type": "composer",
+    "url": "https://repos.hatfield.me"
+  }],
+  "require": {
+    "php": "^7.1.3",
+    "ext-json": "*",
+    "guzzlehttp/guzzle": "~6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Khatfield\\LaravelYtel\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Khatfield\\LaravelYtel\\Providers\\YtelServiceProvider"
+      ],
+      "aliases": {
+        "Ytel": "Khatfield\\LaravelYtel\\Facades\\Ytel"
+      }
+    }
+  }
+}
